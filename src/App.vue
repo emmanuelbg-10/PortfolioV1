@@ -4,14 +4,13 @@ import Prueba from './components/Prueba.vue'
 </script>
 
 <template>
-      <SpeedInsights />
-  <header>
-    <p>Hola Andrea</p>
-  </header>
 
-  <main>
+  <p>Esto es una prueba para ver si funciona todo correctamente</p>
+    <SpeedInsights />
+    <p>Hola Andrea</p>
+
+
     <Prueba />
-  </main>
 
   <footer>
     <p>Adios Andrea</p>
