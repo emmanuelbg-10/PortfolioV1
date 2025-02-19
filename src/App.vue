@@ -1,5 +1,5 @@
 <!-- filepath: /C:/laragon/www/PortfolioV1/src/App.vue -->
-<script setup lang="ts">
+<script setup>
 import { SpeedInsights } from '@vercel/speed-insights/vue'
 </script>
 
