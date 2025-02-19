@@ -10,7 +10,7 @@ Este repositorio es un reflejo de mi viaje en el desarrollo de software. Aquí e
 - **Aprendizajes**: (Documentación, notas y reflexiones sobre lo que he ido descubriendo.)
 
 ### **Tecnologías que uso**
-- Lenguajes: [JavaScript, PHP, Java]
+- Lenguajes: ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  [JavaScript, PHP, Java]
 - Frameworks/Librerías: [Vue, Laravel, Tailwind]
 - Herramientas: [Git]
 
