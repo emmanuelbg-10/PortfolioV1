@@ -1,3 +1,4 @@
+// filepath: /C:/laragon/www/PortfolioV1/vite.config.js
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
