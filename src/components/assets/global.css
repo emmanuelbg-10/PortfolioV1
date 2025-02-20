@@ -80,8 +80,8 @@ body {
 #app {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
-  padding: var(--navbar-height) var(--space-md) var(--space-md);
+  margin: var(--space-md) auto;
+  padding: var(--space-md);
   flex-grow: 1;
 }
 

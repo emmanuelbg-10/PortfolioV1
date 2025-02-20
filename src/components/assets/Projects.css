@@ -2,22 +2,37 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* Siempre mostrar 2 columnas */
-  gap: 2rem 4rem;
+  gap: 2rem;
   justify-items: center;
-  padding: 0 auto;
-  margin: 0;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .project-card {
   background: var(--card-background);
   overflow: hidden;
   width: 100%;
-  max-width: 480px;
-  /* Ajustar el ancho máximo para que quepan 2 tarjetas en una fila */
+  max-width: 600px;
+  max-height: 350px;
+  /* Ajustar el ancho máximo para que las tarjetas sean más alargadas */
   box-shadow: 0 4px 12px var(--shadow);
   transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-  padding: 0 1rem 2rem 1rem;
+  padding: 1rem;
+  padding-top: 0;
+  margin: 1rem;
+  /* Ajustar el margen para que la separación sea uniforme */
 }
+
+@media (min-width: 769px) {
+  .project-card:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .project-card:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
 
 .project-card:hover {
   background-color: var(--card-background-hover);
@@ -46,8 +61,8 @@
   cursor: pointer;
   overflow: hidden;
   height: 0;
-
   padding-bottom: calc(56.25%);
+  /* Relación de aspecto 16:9 */
 }
 
 .project-image {
@@ -68,7 +83,20 @@
 
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     /* Mostrar una columna en pantallas pequeñas */
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-card {
+    max-width: 100%;
+    margin: 1rem;
+    /* Ajustar el ancho máximo para pantallas pequeñas */
+  }
+
+  main {
+    margin 0;
+    padding 0;
   }
 }
