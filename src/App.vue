@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <p>Soy Emmanuel Barral Giraldo</p>
-    <h2>HOLAAAA</h2>
+    <h2>PRUEBAAAA</h2>
     <router-view />
   </div>
 </template>
