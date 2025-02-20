@@ -76,7 +76,8 @@ export default {
 
 
 .click-notice {
-  margin: 0.8rem 0;
+  margin-top: 10px;
+  margin-bottom: -10px;
   color: #777;
   font-size: 0.85rem;
   text-align: center;
