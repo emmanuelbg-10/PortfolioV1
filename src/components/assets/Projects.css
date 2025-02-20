@@ -1,0 +1,74 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Siempre mostrar 2 columnas */
+  gap: 2rem 4rem;
+  justify-items: center;
+  padding: 0 auto;
+  margin: 0;
+}
+
+.project-card {
+  background: var(--card-background);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  /* Ajustar el ancho máximo para que quepan 2 tarjetas en una fila */
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.project-card:hover {
+  background-color: var(--card-background-hover);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+[data-theme="dark"] .project-card:hover {
+  background-color: #1a1a2e;
+  /* Color azul oscuro */
+}
+
+[data-theme="light"] .project-card:hover {
+  background-color: #e0e0e0;
+  /* Color gris claro */
+}
+
+.project-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 0;
+
+  padding-bottom: calc(56.25%);
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none;
+  /* Eliminar la animación de aumento */
+}
+
+.project-card:hover .project-image {
+  transform: none;
+  /* Eliminar la animación de aumento */
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 2fr;
+    /* Mostrar una columna en pantallas pequeñas */
+  }
+}

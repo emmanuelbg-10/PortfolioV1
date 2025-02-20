@@ -1,11 +1,11 @@
 <template>
-
-  <NavBar />
-
-  <main class="content">
-    <ProjectCard />
-    <!-- <router-view /> -->
-  </main>
+  <div id="app">
+    <NavBar />
+    <main class="content">
+      <ProjectCard />
+      <!-- <router-view /> -->
+    </main>
+  </div>
 </template>
 
 <script setup>
@@ -54,42 +54,12 @@ a {
 .content {
   margin-top: var(--navbar-height);
   /* Añadir margen superior para el contenido */
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--navbar-background);
-  box-shadow: 0 4px 12px var(--shadow);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  padding: 0 1rem;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
-  margin: 0;
 }
 
-.navbar li {
-  margin: 0 1rem;
-}
-
-.navbar a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: var(--primary-color-hover);
+@media (max-width: 768px) {
+  .content {
+    padding: 0.5rem;
+  }
 }
 </style>

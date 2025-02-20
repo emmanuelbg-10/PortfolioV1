@@ -36,6 +36,24 @@ import ThemeToggle from './ThemeToggle.vue';
   padding: 0 1rem;
 }
 
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 4px 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
 .menu {
   list-style: none;
   display: flex;
@@ -60,30 +78,19 @@ import ThemeToggle from './ThemeToggle.vue';
   color: var(--primary-color-hover);
 }
 
-.menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-icon span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--primary-color);
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
 @media (max-width: 768px) {
   .menu {
     display: none;
     flex-direction: column;
     width: 100%;
-    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--navbar-background);
+    box-shadow: 0 4px 12px var(--shadow);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
   .menu li {
@@ -92,10 +99,32 @@ import ThemeToggle from './ThemeToggle.vue';
 
   .menu-toggle:checked+.menu-icon+.menu {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .menu-icon {
     display: flex;
+  }
+
+  .menu-icon span:nth-child(1) {
+    transform-origin: top left;
+  }
+
+  .menu-icon span:nth-child(3) {
+    transform-origin: bottom left;
+  }
+
+  .menu-toggle:checked+.menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle:checked+.menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked+.menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 </style>
