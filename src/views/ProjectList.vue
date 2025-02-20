@@ -1,5 +1,5 @@
 <template>
-  <div class="project-list">
+  <div class="projects-container">
     <ProjectCard v-for="project in projects" :key="project.title" :project="project" />
   </div>
 </template>
@@ -19,10 +19,11 @@ export default {
 </script>
 
 <style scoped>
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
 }
 </style>
