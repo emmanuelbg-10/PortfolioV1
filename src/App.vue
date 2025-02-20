@@ -1,31 +1,14 @@
 <template>
-  <section class="projects">
-    <h1>Proyectos Destacados</h1>
-    <div class="project-list">
-      <ProjectCard v-for="proj in projects" :key="proj.id" :project="proj" />
-    </div>
-  </section>
+  <p>Soy Emmanuel Barral Giraldo</p>
+  <router-view />
 </template>
 
 <script>
-import ProjectCard from '@/components/ProjectCard.vue';
-import featuredProjects from '@/data/featuredProjects.js';
-
 export default {
-  name: "Projects",
-  components: { ProjectCard },
-  data() {
-    return {
-      projects: featuredProjects
-    };
-  }
+  name: "App"
 };
 </script>
 
 <style scoped>
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+/* Estilos globales si es necesario */
 </style>

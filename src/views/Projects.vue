@@ -1,7 +1,7 @@
 <template>
   <section class="projects">
     <h1>Proyectos Destacados</h1>
-    <div class="project-list">
+    <div class="projects-container">
       <ProjectCard v-for="proj in projects" :key="proj.id" :project="proj" />
     </div>
   </section>
@@ -23,9 +23,12 @@ export default {
 </script>
 
 <style scoped>
-.project-list {
+.projects-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centrar las tarjetas horizontalmente */
   gap: 1rem;
+  /* Espacio entre las tarjetas */
 }
 </style>
