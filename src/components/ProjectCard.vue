@@ -41,6 +41,7 @@ export default {
   width: 100%;
   max-width: 320px;
   box-shadow: 0 4px 12px var(--shadow);
+
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 

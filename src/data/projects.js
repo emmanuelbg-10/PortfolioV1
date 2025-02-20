@@ -5,7 +5,7 @@ export default [
     "description": "Descripción breve del Proyecto Uno.",
     "repoUrl": "https://github.com/emmanuelbg-10/EstudioTema4Emmanuel",
     "liveUrl": "https://portfolioemmanuelbg10.vercel.app",
-    "imageUrl": `https://api.urlbox.com/v1/fquNVgUgJTmaB3If/png?url=https%3A%2F%2Femmanuelbg10.vercel.app%2F&full_page=true&full_page_mode=native&width=960&height=540`
+    "imageUrl": `https://api.urlbox.com/v1/fquNVgUgJTmaB3If/png?url=https%3A%2F%2Femmanuelbg10.vercel.app%2F&full_page_mode=native&width=960&height=540&full_page=true`
   },
   {
     "id": 2,

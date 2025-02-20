@@ -20,10 +20,13 @@ export default {
 
 <style scoped>
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centrar las tarjetas horizontalmente */
+  gap: 1rem;
+  /* Espacio entre las tarjetas */
+  padding: 0 2rem;
+  /* Añadir padding a los lados */
 }
 </style>
