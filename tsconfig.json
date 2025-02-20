@@ -1,25 +1,21 @@
-// {
-//   "compilerOptions": {
-//     "target": "esnext",
-//     "module": "esnext",
-//     "moduleResolution": "node",
-//     "strict": true,
-//     "jsx": "preserve",
-//     "esModuleInterop": true,
-//     "skipLibCheck": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "baseUrl": ".",
-//     "paths": {
-//       "@/*": [
-//         "src/*"
-//       ]
-//     }
-//   },
-//   "include": [
-//     "./src/**/*"
-//   ],
-//   "exclude": [
-//     "./node_modules",
-//     "./dist"
-//   ]
-// }
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
