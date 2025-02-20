@@ -1,15 +1,16 @@
 <template>
-  <div id="app">
-    <p>Soy Emmanuel Barral Giraldo</p>
-    <h2>PRUEBAAAA</h2>
-    <router-view />
-  </div>
+
+  <NavBar />
+
+  <main class="content">
+    <ProjectCard />
+    <!-- <router-view /> -->
+  </main>
 </template>
 
-<script>
-export default {
-  name: "App"
-};
+<script setup>
+import NavBar from "@/components/NavBar.vue";
+import ProjectCard from "./components/Projects.vue";
 </script>
 
 <style>
@@ -24,6 +25,8 @@ export default {
   --shadow-hover: rgba(0, 0, 0, 0.2);
   --border-radius: 12px;
   --transition-speed: 0.3s;
+  --navbar-height: 60px;
+  /* Ajustar según la altura de la barra de navegación */
 }
 
 * {
@@ -41,5 +44,52 @@ body {
 a {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+#app {
+  padding: 0;
+  /* Eliminar padding del contenedor #app */
+}
+
+.content {
+  margin-top: var(--navbar-height);
+  /* Añadir margen superior para el contenido */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar-background);
+  box-shadow: 0 4px 12px var(--shadow);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--primary-color-hover);
 }
 </style>

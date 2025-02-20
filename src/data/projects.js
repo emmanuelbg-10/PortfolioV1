@@ -1,5 +1,3 @@
-const timestamp = new Date().getTime();
-
 export default [
   {
     id: 1,
@@ -15,7 +13,7 @@ export default [
     description: "Descripción breve del Proyecto Dos.",
     repoUrl: "https://github.com/tuusuario/proyecto-dos",
     liveUrl: "https://proyecto-dos.vercel.app",
-    imageUrl: `https://api.screenshotapi.net/screenshot?token=B5remtdeZEH6tZu21ReZ7GyBy&url=https://mi-proyecto.vercel.app&timestamp=${timestamp}`
+    imageUrl: `https://api.screenshotapi.net/screenshot?token=B5remtdeZEH6tZu21ReZ7GyBy&url=https://mi-proyecto.vercel.app`
   },
   {
     id: 3,
@@ -23,6 +21,16 @@ export default [
     description: "Descripción breve del Proyecto Tres.",
     repoUrl: "https://github.com/tuusuario/proyecto-tres",
     liveUrl: "https://proyecto-tres.vercel.app",
-    imageUrl: `https://api.screenshotapi.net/screenshot?token=B5irmtdeZEH6tZu21ReZ7GyBy&url=https://mi-proyecto.vercel.app&timestamp=${timestamp}`
+    imageUrl: `https://api.screenshotapi.net/screenshot?token=B5irmtdeZEH6tZu21ReZ7GyBy&url=https://mi-proyecto.vercel.app}`
   }
+  ,
+  {
+    id: 4,
+    title: "Proyecto Cuatro",
+    description: "Descripción breve del Proyecto Cuatro.",
+    repoUrl: "https://github.com/tuusuario/proyecto-cuatro",
+    liveUrl: "https://proyecto-cuatro.vercel.app",
+    imageUrl: `https://api.screenshotapi.net/screenshot?token=B5irmtdeZEH6tZu21ReZ7GyBy&url=https://mi-proyecto-cuatro.vercel.app`
+  }
+
 ];

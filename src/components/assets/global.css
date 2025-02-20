@@ -1,0 +1,185 @@
+/* assets/global.css */
+:root {
+  /* Colores principales */
+  --primary-color: #646cff;
+  --primary-color-soft: rgba(100, 108, 255, 0.1);
+  --primary-color-hover: #535bf2;
+
+  /* Sistema de colores */
+  --text-color: #213547;
+  --background-color: #ffffff;
+  --background-color-soft: rgba(255, 255, 255, 0.1);
+  --surface-color: #f8f8f8;
+  --border-color: rgba(0, 0, 0, 0.1);
+
+  /* Navbar */
+  --navbar-height: 4rem;
+  --navbar-background: #ffffff;
+  --navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Efectos */
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 8px rgba(0, 0, 0, 0.2);
+
+  /* Tipografía */
+  --font-base: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Espaciados */
+  --space-unit: 1rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+[data-theme="dark"] {
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --background-color-soft: rgb(24, 24, 44);
+  --surface-color: #1a1a1a;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --navbar-background: #1a1a1a;
+  --navbar-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Layout principal */
+#app {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--navbar-height) var(--space-md) var(--space-md);
+  flex-grow: 1;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--navbar-background);
+  box-shadow: var(--navbar-shadow);
+  z-index: 1000;
+  padding: 0 var(--space-md);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+h3 {
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: var(--space-md);
+}
+
+/* Botones */
+button {
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+button:hover {
+  background: var(--primary-color-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Tarjetas */
+.card {
+  background: var(--surface-color);
+  padding: var(--space-md);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --space-unit: 0.875rem;
+    --navbar-height: 3.5rem;
+  }
+
+  #app {
+    padding-top: var(--navbar-height);
+  }
+
+  .navbar {
+    padding: 0 var(--space-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
