@@ -51,14 +51,15 @@
 }
 
 .menu a {
-  color: var(--primary-color);
+  color: var(--light-gray);
   text-decoration: none;
   font-size: 1.2rem;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .menu a:hover {
-  color: var(--primary-color-hover);
+  color: var(--light-gray-hover);
 }
 
 .theme-toggle-container {
@@ -76,9 +77,10 @@
     left: 0;
     background: linear-gradient(
       135deg,
-      #333,
-      #555
-    ); /* Gradiente gris que queda bien en fondo claro y oscuro */
+      var(--navbar-background) 0%,
+      color-mix(in srgb, var(--navbar-background) 40%, var(--primary-color-soft)) 50%,
+      var(--navbar-background) 100%
+    );
     box-shadow: 0 4px 12px var(--shadow);
     opacity: 0;
     transform: translateY(-20px);
