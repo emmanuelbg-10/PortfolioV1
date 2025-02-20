@@ -10,10 +10,11 @@
       <li><a href="#conocimientos">Conocimientos</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
-      <li>
-        <ThemeToggle />
-      </li>
+
     </ul>
+
+    <ThemeToggle />
+
   </nav>
 </template>
 
